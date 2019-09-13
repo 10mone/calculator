@@ -27,15 +27,7 @@ fn div(a: &i32, b: &i32) -> i32{
 fn mul(a: &i32, b: &i32) -> i32{
     a * b
 }
-/*
-fn is_end(length: i32, input_len: i32) -> bool{
-    if length == input_len{
-        return true
-    }
-    false
-}
-*/
-fn main() {
+fn calculate() {
     let input = read_as_char();
     let mut nums: Vec<i32> = Vec::new();
     let input_len = input.len();
@@ -78,4 +70,7 @@ fn main() {
         }
     }
     println!("{}", result);
+}
+fn main(){
+    calculate();
 }
