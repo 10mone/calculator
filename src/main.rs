@@ -28,6 +28,7 @@ fn mul(a: &i32, b: &i32) -> i32{
     a * b
 }
 fn calculate(input: Vec<char>) {
+    println!("---into calculate---");
     let mut nums: Vec<i32> = Vec::new();
     let mut input_rev: Vec<char> = Vec::new();
 
@@ -67,6 +68,7 @@ println!("-----");
                 for j in inparent.clone(){
                     result.push(j);
                 }
+                inparent = Vec::new();
                 flag = false;
             }else{
                 inparent.push(i);
@@ -97,10 +99,10 @@ println!("-----");
 
 fn main(){
     let input = read_as_char();
-    let mut symbol: Vec<char> = Vec::new();
-    let mut flag = false;
-    let mut ff: Vec<char> = Vec::new();
-    let mut result: Vec<char> = Vec::new();
+    // let mut symbol: Vec<char> = Vec::new();
+    // let mut flag = false;
+    // let mut ff: Vec<char> = Vec::new();
+    // let mut result: Vec<char> = Vec::new();
 
     calculate(input);
 }
